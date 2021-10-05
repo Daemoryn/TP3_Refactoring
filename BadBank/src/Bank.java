@@ -7,19 +7,19 @@ public class Bank {
         this.decouvert = decouvert;
     }
 
-    public void action(Action action, int somme) {
-        if (action == Action.DEPOT) {
-            solde = solde + somme;
+    public void depot(int somme) {
+        solde = solde + somme;
+    }
+
+    public void retrait(int somme) {
+        if (somme <= (solde + decouvert)) {
+            solde = solde - somme;
+        } else {
+            System.out.println("Action refusée.");
         }
-        if (action == Action.RETRAIT) {
-            if (somme <= (solde + decouvert)) {
-                solde = solde - somme;
-            } else {
-                System.out.println("Action refusée. ");
-            }
-        }
-        if (action == Action.AFFICHAGE) {
-            System.out.println("Le solde est de : " + solde);
-        }
+    }
+
+    public void affichage() {
+        System.out.println("Le solde est de : " + solde);
     }
 }

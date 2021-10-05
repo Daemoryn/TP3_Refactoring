@@ -4,10 +4,9 @@ public class Main {
     {
         Bank bank = new Bank(0, 100);
 
-        bank.action(Action.DEPOT, 50);
-        bank.action(Action.AFFICHAGE, 0);
-        bank.action(Action.RETRAIT, 100);
-        bank.action(Action.AFFICHAGE, 0);
+        bank.depot(50);
+        bank.affichage();
+        bank.retrait(100);
+        bank.affichage();
     }
-
 }
