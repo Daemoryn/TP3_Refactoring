@@ -8,7 +8,9 @@ public class Main {
         name.add("Marley");
         Person p1 = new Person(1, name);
 
-        System.out.println("The person code of "+p1.getFirstName()+" "+p1.getLastName()+" is "+p1.getCode()+". :)");
+        System.out.println("The person code of "
+                +p1.getFirstName()+" " +p1.getLastName()+" is "
+                +p1.getCode()+". :)");
     }
 }
 
