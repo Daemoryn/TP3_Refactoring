@@ -1,27 +1,24 @@
 public class Bank {
-
     int solde;
     int decouvert;
 
-    Bank(int solde, int decouvert){
+    Bank(int solde, int decouvert) {
         this.solde = solde;
         this.decouvert = decouvert;
     }
 
-    public void action(int action, int somme) {
-        if(action ==1) {
+    public void action(Action action, int somme) {
+        if (action == Action.DEPOT) {
             solde = solde + somme;
         }
-
-        if (action ==2) {
-            if(somme <= (solde + decouvert)) {
+        if (action == Action.RETRAIT) {
+            if (somme <= (solde + decouvert)) {
                 solde = solde - somme;
-            }else {
+            } else {
                 System.out.println("Action refusée. ");
             }
         }
-
-        if(action ==3) {
+        if (action == Action.AFFICHAGE) {
             System.out.println("Le solde est de : " + solde);
         }
     }
