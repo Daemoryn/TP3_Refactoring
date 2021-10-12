@@ -1,0 +1,8 @@
+package extractInterface;
+
+public interface Liste {
+    boolean add(Object o);
+
+    boolean isEmpty();
+
+}
